@@ -17,7 +17,10 @@ var SongModel = Backbone.Model.extend({
 
   enqueue: function() {
     this.trigger('enqueue', this);
-  }
+  },
 
+  defaults: {
+    playcount: 0
+  }
 
 });

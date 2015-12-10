@@ -4,7 +4,7 @@ var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td><td><%= playcount %></td>'), // Adding playcount 
+  template: _.template('<td>(<%= artist %>)</td><td class = "title"><%= title %></td><td><%= playcount %></td>'), // Adding playcount 
 
   initialize: function() {
     this.model.on('play', function () {
@@ -17,7 +17,7 @@ var LibraryEntryView = Backbone.View.extend({
   },
   
   events: {
-    'click': function() {
+    'click .title': function() {
       // this.model.play(); // THIS SEEMS WIERD BUT MAKES SPEC PASS
       this.model.enqueue();
     },
