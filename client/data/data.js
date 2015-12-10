@@ -2,22 +2,22 @@
 var songData = [
   {
     url: "http://zacharylester.com/washedoutfeelitallaround.mp3",
-    title: "One In A Million",
+    title: "Washed out 1",
     artist: "Aaliyah",
   },
   {
     url: "http://zacharylester.com/washedoutfeelitallaround.mp3",
-    title: "Age Ain't Nothing But A Number",
+    title: "Washed out 2",
     artist: "Aaliyah",
   },
   {
     url: "http://zacharylester.com/fidlarnowaves.mp3",
-    title: "Hot Like Fire",
+    title: "No Waves 1",
     artist: "Aaliyah",
   },
   {
     url:  "http://zacharylester.com/fidlarnowaves.mp3",
-    title: "If Your Girl Only Knew",
+    title: "No Waves 2",
     artist: "Aaliyah",
   }
 ];

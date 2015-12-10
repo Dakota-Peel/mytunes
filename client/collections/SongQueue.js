@@ -17,14 +17,14 @@ var SongQueue = Songs.extend({
       }
     }, this);
 
-    this.on('dequeue', function() {
-      this.remove();
+    this.on('dequeue', function(song) {
+      if(song === this.at(0)){
+        console.log('is current song');
+        song.ended();
+      } else {
+        this.remove(song);
+      }
     }, this);
-
-  },
-
-  defaults: {
-    
   },
 
   playFirst: function () {
