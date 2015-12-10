@@ -19,7 +19,6 @@ var SongQueue = Songs.extend({
 
     this.on('dequeue', function(song) {
       if(song === this.at(0)){
-        console.log('is current song');
         song.ended();
       } else {
         this.remove(song);

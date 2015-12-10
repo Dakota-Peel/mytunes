@@ -5,6 +5,10 @@ var LibraryView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
+    this.on('all', function () { 
+      console.log('updating',this);
+      this.render();
+    }, this);
   },
 
   render: function() {

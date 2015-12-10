@@ -4,17 +4,23 @@ var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
+  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td><td><%= playcount %></td>'), // Adding playcount 
 
+  initialize: function() {
+    this.model.on('play', function () {
+      this.render();
+    }, this);
+  },
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
   },
+  
   events: {
     'click': function() {
       // this.model.play(); // THIS SEEMS WIERD BUT MAKES SPEC PASS
       this.model.enqueue();
-    }
+    },
   }
 
 });
