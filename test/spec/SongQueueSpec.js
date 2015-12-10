@@ -50,9 +50,7 @@ describe('SongQueue', function() {
     describe('if there are any songs left in the queue', function() {
     it('plays the first song in the queue', function() {
         var songQueue = new SongQueue([songData1, songData2]);
-        console.log(songQueue.at(0));
         songQueue.at(0).ended();
-        console.log(songQueue.at(0));
         expect(playSpy).to.have.been.called;
       });
     });
