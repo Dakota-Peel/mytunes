@@ -20,7 +20,7 @@ var songData = [
   },
   {
     url:  "http://zacharylester.com/fidlarnowaves.mp3",
-    title: "No Waves 2",
+    title: "No Waves",
     artist: "Aaliyah",
     playcount: 0,
   }
